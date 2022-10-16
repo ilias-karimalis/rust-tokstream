@@ -151,7 +151,7 @@ where
         // update the end of the new span
         newstream.range.end = self.range.start + range.end;
         assert!(newstream.len() == range.end - range.start);
-        self.update_span();
+        newstream.update_span();
         newstream
     }
 
