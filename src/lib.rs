@@ -500,9 +500,9 @@ where
         for i in start..end {
             let t = &self.tokens[i];
             if i == self.range.start {
-                writeln!(f, " ---> [{:>5}]  {}", i, t)?;
+                writeln!(f, " ---> [{i:>5}]  {t}")?;
             } else {
-                writeln!(f, "      [{:>5}]  {}", i, t)?;
+                writeln!(f, "      [{i:>5}]  {t}")?;
             }
         }
 
@@ -527,9 +527,9 @@ where
         writeln!(f, "      [     ]  <start-of-file>")?;
         for (i, t) in self.tokens.iter().enumerate() {
             if i == self.range.start {
-                writeln!(f, " ---> {:>5}  {}", i, t)?;
+                writeln!(f, " ---> {i:>5}  {t}")?;
             } else {
-                writeln!(f, "      {:>5}  {}", i, t)?;
+                writeln!(f, "      {i:>5}  {t}")?;
             }
         }
         writeln!(f, "      [     ]  <end-of-file>")
